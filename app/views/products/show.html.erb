@@ -1,13 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<h2>
+  <strong><%= @product.name %></strong>
+</h2>
 
 <p>
   <strong>Image:</strong>
-  <%= @product.image %>
+  <%= image_tag @product.image %>
 </p>
 
 <p>
@@ -16,9 +15,23 @@
 </p>
 
 <p>
-  <strong>Price in cents:</strong>
-  <%= @product.price_in_cents %>
+  <strong>Price:</strong>
+  $<%= @product.formatted_price %>
 </p>
+
+<button class="add-to-cart" type="button" name="button">Add to Cart</button>
+
+<h3>Reviews</h3>
+<% @product.reviews.each do |review| %>
+  <p>
+    <%= review.comment %>
+    <br>
+    Added on: <%= review.created_at %>
+  </p>
+<% end %>
+
+<h3>New Review</h3>
+<%= render 'reviews/form' %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
