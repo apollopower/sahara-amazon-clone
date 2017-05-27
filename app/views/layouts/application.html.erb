@@ -12,6 +12,7 @@
   </head>
 
   <body>
+<<<<<<< HEAD
     <header class ="nav-bar">
     <nav>
       <ul class = "nav-bar__menu">
@@ -37,6 +38,25 @@
     
   </div>
   <div id ="container">
+=======
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <ul>
+        <li><%= link_to 'Cart', cart_index_path %></li>
+        <li><%= link_to 'Account', edit_user_registration_path %></li>
+        <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+      </ul>
+    <% else %>
+      <ul>
+        <li><%= link_to 'Login', new_user_session_path %></li>
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
+      </ul>
+    <% end %>
+
+>>>>>>> 7c69df87d9f6b6b021fe733253f22b83c640224d
     <%= yield %>
 <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert alert-#{name}") %>

@@ -73,6 +73,8 @@ GEM
     ffi (1.9.18)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    httparty (0.15.4)
+      multi_xml (>= 0.5.2)
     i18n (0.8.1)
     jbuilder (2.6.4)
       activesupport (>= 3.0.0)
@@ -92,6 +94,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.2)
     multi_json (1.12.1)
+    multi_xml (0.6.0)
     nio4r (2.0.0)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
@@ -189,6 +192,10 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise (~> 4.2)
+<<<<<<< HEAD
+=======
+  httparty
+>>>>>>> 7c69df87d9f6b6b021fe733253f22b83c640224d
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.7)
@@ -204,7 +211,11 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
+<<<<<<< HEAD
    ruby 2.4.1p111
+=======
+   ruby 2.3.1p112
+>>>>>>> 7c69df87d9f6b6b021fe733253f22b83c640224d
 
 BUNDLED WITH
    1.14.6
