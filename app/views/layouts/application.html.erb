@@ -7,25 +7,43 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <link rel="stylesheet" type= "text/css" href="normalize.css">
+     <!-- <link rel="stylesheet" type= "text/css" href="style.css"> -->
   </head>
 
   <body>
-    <% flash.each do |name, msg| %>
+    <header class ="nav-bar">
+    <nav>
+      <ul class = "nav-bar__menu">
+        <li class ="nav-bar__menu-item"><a href="#" class="nav-bar__menu-item-link">Logo</a></li>
+        <li class ="nav-bar__menu-item"><%= link_to 'home' %></li>
+        <form action="/products" method ="post">
+          <li class ="nav-bar__menu-item"><input type="text" class="nav-bar__menu-item-input" placeholder= "Search in Sahara" /></li>
+          <!-- <li class ="nav-bar__menu-item"><input type="submit" value="Submit"></li> -->
+        </form>
+        <% if user_signed_in? %>
+        <li class ="nav-bar__menu-item"><%= link_to 'Account', edit_user_registration_path %></li>
+        <li class ="nav-bar__menu-item"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+        <% else %>
+        <li class ="nav-bar__menu-item"><%= link_to 'Login', new_user_session_path %></li>
+        <li class ="nav-bar__menu-item"><%= link_to 'Sign up', new_user_registration_path %></li>
+      <% end %>
+      </ul>
+    </nav>
+  </header>
+    
+    
+  <div id="slider1">
+    
+  </div>
+  <div id ="container">
+    <%= yield %>
+<% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
     <% end %>
+  </div>
+    
 
-    <% if user_signed_in? %>
-      <ul>
-        <li><%= link_to 'Account', edit_user_registration_path %></li>
-        <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
-      </ul>
-    <% else %>
-      <ul>
-        <li><%= link_to 'Login', new_user_session_path %></li>
-        <li><%= link_to 'Sign up', new_user_registration_path %></li>
-      </ul>
-    <% end %>
-
-    <%= yield %>
+    
   </body>
 </html>

@@ -12,11 +12,15 @@
 	<header class ="nav-bar">
 		<nav>
 			<ul class = "nav-bar__menu">
+				<li class ="nav-bar__menu-item"><a href="#" class="nav-bar__menu-item-link">Logo</a></li>
 				<li class ="nav-bar__menu-item"><a href="#" class="nav-bar__menu-item-link">Sahara</a></li>
-				<li class ="nav-bar__menu-item"><a href="#" class="nav-bar__menu-item-link">Search</a></li>
-				<li class ="nav-bar__menu-item"><input type="text" class="nav-bar__menu-item-input" placeholder= "Searh in Sahara" /></li>
-				<li class ="nav-bar__menu-item-left"><a href="#" class="nav-bar__menu-item-link">Login</a></li>
-				<li class ="nav-bar__menu-item-left"><a href="#" class="nav-bar__menu-item-link">Cart</a></li>
+				<form action="/products" method ="post">
+					<li class ="nav-bar__menu-item"><input type="text" class="nav-bar__menu-item-input" placeholder= "Searh in Sahara" /></li>
+					<!-- <li class ="nav-bar__menu-item"><input type="submit" value="Submit"></li> -->
+				</form>
+				
+				<li class ="nav-bar__menu-item-left"><a href="/users/sign_in" class="nav-bar__menu-item-link">Login</a></li>
+				<!-- <li class ="nav-bar__menu-item-left"><a href="#" class="nav-bar__menu-item-link">Cart</a></li> -->
 			</ul>
 		</nav>
 	</header>
