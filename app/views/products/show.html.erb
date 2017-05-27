@@ -24,6 +24,7 @@
 <h3>Reviews</h3>
 <% @product.reviews.each do |review| %>
   <p>
+    <strong><%= review.user.email %></strong><br>
     <%= review.comment %>
     <br>
     Added on: <%= review.created_at %>
