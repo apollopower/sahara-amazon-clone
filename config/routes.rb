@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cart/index'
+
   devise_for :users
   get 'search', to: 'search#index'
 
