@@ -2,7 +2,7 @@
 <html>
   <head>
   	<meta name ="viewport" content="width=device-width, initial-scale = 1">
-    <title>Sahara</title>
+    <title>Sahara.com</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,12 +12,10 @@
   </head>
 
   <body>
-    <header class ="nav-bar">
+    <header class="nav-bar">
     <nav>
-      <ul class = "nav-bar__menu">
-        <li class ="nav-bar__menu-item"><a href="#" class="nav-bar__menu-item-link">Logo</a></li>
-        <li class ="nav-bar__menu-item"><%= link_to 'Sahara', root_path %>
-</li>
+      <ul class="nav-bar__menu">
+        <li class="nav-bar__menu-logo"><%= link_to 'SAHARA.com', root_path %></li>
         <%= form_tag("/search", method: "get") do %>
           <%= text_field_tag(:query,nil, placeholder: 'Search in Sahara')%>
         <% end %>
@@ -26,8 +24,9 @@
           <li class ="nav-bar__menu-item"><input type="submit" value="Submit"></li>
         </form> -->
         <% if user_signed_in? %>
-        <li class ="nav-bar__menu-item"><%= link_to 'Account', edit_user_registration_path %></li>
-        <li class ="nav-bar__menu-item"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+        <li class="nav-bar__menu-welcome">Welcome, <%= current_user.email %></li>
+        <li class ="nav-bar__menu-account"><%= link_to 'Account', edit_user_registration_path %></li>
+        <li class ="nav-bar__menu-sign-out"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
         <% else %>
         <li class ="nav-bar__menu-item"><%= link_to 'Login', new_user_session_path %></li>
         <li class ="nav-bar__menu-item"><%= link_to 'Sign up', new_user_registration_path %></li>
@@ -43,8 +42,12 @@
         <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
       <% end %>
   </div>
-    
+  <footer>
+    <ul class="nav-bar__menu">
+      <li class="nav-bar__menu-item"><a href="#">About</a></li>
+    </ul>
+  </footer>
 
-    
+
   </body>
 </html>

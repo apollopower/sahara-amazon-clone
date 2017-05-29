@@ -2,7 +2,7 @@
   box-sizing: border-box;
   font-family: Helvetica;
 }
-body { 
+body {
     background-image: url('background.jpg');
     /*background-repeat: no-repeat;*/
     background-attachment: fixed;
@@ -17,17 +17,17 @@ a {
 }
 /* --- header --- */
 .nav-bar {
-	background: black;
-	height: 60px;
-	position: fixed;
-	overflow: hidden;
-  	top: 0;
-  	width: 100%;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height:4em;
+  background-color: black;
+  z-index:1;
 }
 .nav-bar__menu {
 	margin: 0px;
 	padding: 0px;
-	display: flex; 
+	display: flex;
 
 }
 #show{
@@ -46,7 +46,7 @@ a {
 }
 .nav-bar__menu-item-link {
 	color: white;
-	
+
 }
 .nav-bar__menu-item-input {
 	color: white;
@@ -56,7 +56,7 @@ a {
 	background-color: gray;
 	border-radius: 10px;
 
-	
+
 }
 .nav-bar__menu-item-input::placeholder {
   color: lightgray;
@@ -117,7 +117,7 @@ a {
 .search-description1{
 	height: 160px;
 	width: 69%;
-	
+
 	float: right;
 	border-bottom: 1px solid lightgray ;
 	/*margin: 10px;*/
@@ -162,7 +162,7 @@ a {
 	height: 500px;
 	background-color: lightgray;
 	background-image: url('apple_watch.jpg');
-	opacity: 0.9;
+	opacity: 0.8;
 	background-size: 100%;
 	background-repeat: no-repeat;
 }
@@ -191,25 +191,25 @@ a {
 #featured-product{
 	width: 80%;
 	margin: auto;
-	
+
 }
 #featured-product-img{
 	width: 140px;
 	margin: auto;
-	border-radius: 15px; 
+	border-radius: 15px;
 }
 #featured-product-price{
 	width: 140px;
 	margin: auto;
-	font-size: 30px; 
+	font-size: 30px;
 	padding: 30px 0px;
-	
+
 }
 #featured-product-cart{
 	width: 80px;
 	margin: auto;
 	padding-top: 20px;
-	
+
 }
 .add-to-cart{
 	height: 30px;
@@ -249,11 +249,11 @@ a {
 .field{
 	padding-left: 30px;
 }
-.field label{ 
+.field label{
 	font-size: 15px;
 	padding-bottom: 5px;
 }
-.field input{ 
+.field input{
 	font-size: 14px;
 	height: 30px;
 	border: none;
@@ -278,4 +278,19 @@ a {
 .a-price {
 	padding-top: 5px;
 	font-size: 23px;
+}
+
+footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height:3em;
+  background-color: black;
+}
+
+footer .nav-bar__menu-item {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: .8em .5em 1em 1.2em;
+  text-align: center;
 }

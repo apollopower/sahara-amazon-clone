@@ -3,10 +3,11 @@
 /*// You can use Sass (SCSS) here: http://sass-lang.com/*/
 * {
   box-sizing: border-box;
+  border-radius: 2%;
   font-family: Verdana;
   color: black;
 }
-body { 
+body {
     background-image: url('../images/background-hd.jpg');
     /*background-repeat: no-repeat;*/
     background-attachment: fixed;
@@ -21,17 +22,17 @@ a {
 }
 /* --- header --- */
 .nav-bar {
-	background: black;
-	height: 60px;
-	position: fixed;
-	overflow: hidden;
-  	top: 0;
-  	width: 100%;
+  position:fixed;
+  top: 0;
+  width:100%;
+  height:4em;
+  background-color: black;
+  z-index:1;
 }
 .nav-bar__menu {
 	margin: 0px;
 	padding: 0px;
-	display: flex; 
+	display: flex;
 
 }
 #show{
@@ -42,15 +43,44 @@ a {
 	font-size: 50px;
 }
 .nav-bar__menu-item {
-	padding: 0.9em 0 0.5em 1em;
+	padding: 1.1em 0 0.5em 1em;
+  font-size: 1.1em;
+  color: white;
 }
+
+.nav-bar__menu-account {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 1.2em .5em 0.5em 1em;
+}
+
+.nav-bar__menu-sign-out {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 1.2em .5em 0.5em 1em;
+}
+
+.nav-bar__menu-logo {
+  padding: 1.1em .7em 0.5em 1em;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-bar__menu-welcome {
+  color: white;
+  font-size: 1.2em;
+  font-style: italic;
+  padding-top: 1.2em;
+}
+
 .nav-bar__menu-item-left {
 	padding: 0.9em 0 0.5em 1em;
 	float: right;
 }
 .nav-bar__menu-item-link {
 	color: white;
-	
+
 }
 .nav-bar__menu-item-input {
 	color: white;
@@ -60,7 +90,7 @@ a {
 	background-color: gray;
 	border-radius: 10px;
 
-	
+
 }
 .nav-bar__menu-item-input::placeholder {
   color: lightgray;
@@ -70,6 +100,12 @@ a {
 .nav-bar__menu-item-link:hover {
 	color: lightgray;
 }
+
+.nav-bar__menu-logo:hover {
+  text-decoration: underline;
+  color: white;
+}
+
 #container{
 	width: 85%;
 	background-color: rgba(255,255,255,0.9);
@@ -81,4 +117,47 @@ a {
 	height: 400px;
 	width: 80%;
 	margin: auto;
+}
+
+/* Info Section */
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.info-item {
+  /*display: flex;
+  flex-direction: row;
+  align-items: center;*/
+  text-align: center;
+}
+
+.info-item-image {
+  max-width: 7em;
+  max-height: auto;
+  padding-top: 2em;
+}
+
+.info-item p {
+  font-family: helvetica;
+  font-size: 1.2em;
+  padding-bottom: 5em;
+}
+/* Footer */
+
+footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height:3em;
+  background-color: black;
+}
+
+footer .nav-bar__menu-item {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: .8em .5em 1em 1.2em;
+  text-align: center;
 }

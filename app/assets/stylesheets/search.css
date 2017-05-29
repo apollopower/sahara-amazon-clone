@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: Verdana;
 }
-body { 
+body {
     background-image: url('background.jpg');
     /*background-repeat: no-repeat;*/
     background-attachment: fixed;
@@ -31,7 +31,7 @@ a {
 .nav-bar__menu {
 	margin: 0px;
 	padding: 0px;
-	display: flex; 
+	display: flex;
 
 }
 #show{
@@ -50,7 +50,7 @@ a {
 }
 .nav-bar__menu-item-link {
 	color: white;
-	
+
 }
 .nav-bar__menu-item-input {
 	color: white;
@@ -60,7 +60,7 @@ a {
 	background-color: gray;
 	border-radius: 10px;
 
-	
+
 }
 .nav-bar__menu-item-input::placeholder {
   color: lightgray;
@@ -99,4 +99,9 @@ a {
 	width: 60%;
 	display: flex;
 	/*float: right;*/
+}
+
+.a-price {
+  padding-top: 1.5em;
+  font-weight: bold;
 }
