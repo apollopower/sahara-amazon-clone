@@ -7,8 +7,8 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-     <link rel="stylesheet" type= "text/css" href="normalize.css">
-     <!-- <link rel="stylesheet" type= "text/css" href="style.css"> -->
+     <link rel="stylesheet" type= "text/css" href="assets/normalize.css">
+     <link rel="stylesheet" type= "text/css" href="style.css">
   </head>
 
   <body>
@@ -16,11 +16,15 @@
     <nav>
       <ul class = "nav-bar__menu">
         <li class ="nav-bar__menu-item"><a href="#" class="nav-bar__menu-item-link">Logo</a></li>
-        <li class ="nav-bar__menu-item"><%= link_to 'home' %></li>
-        <form action="/products" method ="post">
-          <li class ="nav-bar__menu-item"><input type="text" class="nav-bar__menu-item-input" placeholder= "Search in Sahara" /></li>
-          <!-- <li class ="nav-bar__menu-item"><input type="submit" value="Submit"></li> -->
-        </form>
+        <li class ="nav-bar__menu-item"><%= link_to 'Sahara', root_path %>
+</li>
+        <%= form_tag("/search", method: "get") do %>
+          <%= text_field_tag(:query,nil, placeholder: 'Search in Sahara')%>
+        <% end %>
+        <!-- <form action= "search" method ="get">
+          <li class ="nav-bar__menu-item"><input type="text" class="nav-bar__menu-item-input" placeholder= "Search in Sahara" id = "query"/></li>
+          <li class ="nav-bar__menu-item"><input type="submit" value="Submit"></li>
+        </form> -->
         <% if user_signed_in? %>
         <li class ="nav-bar__menu-item"><%= link_to 'Account', edit_user_registration_path %></li>
         <li class ="nav-bar__menu-item"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
@@ -31,10 +35,7 @@
       </ul>
     </nav>
   </header>
-    
-    
-  <div id="slider1">
-    
+  <div id="slider">
   </div>
   <div id ="container">
     <%= yield %>

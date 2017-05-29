@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
-<<<<<<< HEAD
+
 ruby '2.4.1'
-=======
-ruby '2.3.1'
->>>>>>> 7c69df87d9f6b6b021fe733253f22b83c640224d
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -58,8 +55,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-<<<<<<< HEAD
-=======
 gem 'httparty'
->>>>>>> 7c69df87d9f6b6b021fe733253f22b83c640224d
 gem 'devise', '~> 4.2'

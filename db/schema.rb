@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170527161436) do
-=======
 ActiveRecord::Schema.define(version: 20170527211923) do
->>>>>>> 7c69df87d9f6b6b021fe733253f22b83c640224d
 
   create_table "products", force: :cascade do |t|
     t.string "name"
@@ -37,14 +33,11 @@ ActiveRecord::Schema.define(version: 20170527211923) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
-<<<<<<< HEAD
-=======
   create_table "searches", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
->>>>>>> 7c69df87d9f6b6b021fe733253f22b83c640224d
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

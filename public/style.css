@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: Verdana;
+  font-family: Helvetica;
 }
 body { 
     background-image: url('background.jpg');
@@ -68,13 +68,13 @@ a {
 }
 #container{
 	width: 85%;
-	background-color: rgba(255,255,255,0.9);
-	height: 800px;
+	background-color: rgba(255,255,255,0.7);
+	height: 100%;
 	margin: auto;
 }
 #slider{
 	background: transparent;
-	height: 60px;
+	height: 100px;
 	width: 80%;
 	margin: auto;
 }
@@ -83,4 +83,199 @@ a {
 	height: 200px;
 	width: 80%;
 	margin: auto;
+	background-color: transparent;
+}
+.search-picture{
+	height: 160px;
+	width: 20%;
+	display: flex;
+	border-bottom: 1px  solid lightgray;
+	background-color: rgba(255,255,255,0.1);
+	padding-left: 20px;
+	padding-top: 10px;
+	min-width: 140px;
+
+}
+.search-description {
+	height: 160px;
+	width: 69%;
+	display: flex;
+	/*float: right;*/
+	border-bottom: 1px solid lightgray ;
+	/*margin: 10px;*/
+	background-color: rgba(255,255,255,0.1);
+}
+.search-picture1{
+	height: 160px;
+	width: 20%;
+	border-bottom: 1px  solid lightgray;
+	background-color: rgba(255,255,255,0.1);
+	padding-left: 20px;
+	padding-top: 10px;
+	min-width: 140px;
+}
+.search-description1{
+	height: 160px;
+	width: 69%;
+	
+	float: right;
+	border-bottom: 1px solid lightgray ;
+	/*margin: 10px;*/
+	background-color: rgba(255,255,255,0.1);
+}
+#query{
+	padding-top: 3px;
+	margin: 14px 3px;
+	color: white;
+	height: 30px;
+	border: none;
+	width: 600px;
+	background-color: lightgray;
+	border-radius: 10px;
+	padding-left: 15px;
+	color: black;
+	font-size: 15px;
+}
+#search-main-title{
+	height: 40px;
+	text-align: center;
+	padding-top: 5px;
+	margin-bottom: 20px;
+}
+/*\#login-container{
+	padding: 20px;
+}*/
+@media only screen and (min-width: 768px){
+	/* --- events --- */
+	#sections{
+	display: flex;
+	margin: auto;
+	}
+}
+.actions input{
+	height: 20px;
+}
+#container a {
+	font-size: 20px;
+}
+#main-section-products{
+	height: 500px;
+	background-color: lightgray;
+	background-image: url('apple_watch.jpg');
+	opacity: 0.9;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.best-seller{
+	padding: 60px;
+	font-family: Helvetica;
+	color: gray;
+	text-shadow: 1px 1px lightgray;
+	padding-bottom: 10px;
+	font-size: 40px;
+	}
+.product-name {
+	padding-top: 350px;
+	font-family: Helvetica;
+	color: black;
+	padding-left: 60px;
+
+}
+.product-name1 {
+	padding-top: 30px;
+	font-family: Helvetica;
+	color: black;
+	text-align: center;
+	padding-left: 0px;
+}
+#featured-product{
+	width: 80%;
+	margin: auto;
+	
+}
+#featured-product-img{
+	width: 140px;
+	margin: auto;
+	border-radius: 15px; 
+}
+#featured-product-price{
+	width: 140px;
+	margin: auto;
+	font-size: 30px; 
+	padding: 30px 0px;
+	
+}
+#featured-product-cart{
+	width: 80px;
+	margin: auto;
+	padding-top: 20px;
+	
+}
+.add-to-cart{
+	height: 30px;
+	background-color: #088000;
+	color: white;
+	font-size: 13px;
+	border: none;
+	border-radius: 5px;
+}
+.field-review{
+	width: 80%;
+	margin: auto;
+}
+.field-review textarea{
+	height: 60px;
+	width: 90%;
+	border: none;
+	font-size: 15px;
+	font-family: Helvetica;
+	background-color: rgba(243, 243, 243, 0.8);
+	border-radius: 3px;
+
+}
+.actions{
+	width: 80%;
+	margin: auto;
+}
+.actions input{
+	height: 30px;
+	background-color: #088000;
+	color: white;
+	font-size: 13px;
+	border: none;
+	border-radius: 5px;
+
+}
+.field{
+	padding-left: 30px;
+}
+.field label{ 
+	font-size: 15px;
+	padding-bottom: 5px;
+}
+.field input{ 
+	font-size: 14px;
+	height: 30px;
+	border: none;
+	border-radius: 5px;
+	padding-left: 10px;
+	width: 70%;
+
+}
+.field textarea{
+	height: 80px;
+	width: 70%;
+	border: none;
+	font-size: 15px;
+	font-family: Helvetica;
+	background-color: rgba(243, 243, 243, 0.8);
+	border-radius: 5px;
+
+}
+.a-title{
+	font-size: 14px;
+}
+.a-price {
+	padding-top: 5px;
+	font-size: 23px;
 }

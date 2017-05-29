@@ -1,12 +1,20 @@
-<<<<<<< HEAD
-<h1>Search#index</h1>
-<p>Find me in app/views/search/index.html.erb</p>
-=======
-<h1>Search Index</h1>
+<div id ="search-main-title"><h1 >Search for "<%= params[:query] %>" in Sahara</h1></div>
 
-<% (0..@search.title.length).each do |idx| %>
-  <%= @search.title[idx] %><br>
-  <%= image_tag @search.image[idx].to_s %><br>
-  $<%= @search.price[idx] %><br>
+<% if @search.title[0].to_s =="" %>
+	<h3>Has no results</h3>
+<% else %>
+	<% (0..20).each do |idx| %>
+		<section id="sections">
+			
+			<div class ="search-picture1">
+				<%= image_tag @search.image[idx].to_s %>
+			</div>
+			<div class ="search-description1">	
+				<ul>
+					<li class="a-title"><%= @search.title[idx] %></li>
+					<li class="a-price">$<%= @search.price[idx] %></li>
+				</ul>
+			</div>
+		</section>
+	<% end %>
 <% end %>
->>>>>>> 7c69df87d9f6b6b021fe733253f22b83c640224d
