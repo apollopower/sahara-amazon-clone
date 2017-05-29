@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: Verdana;
 }
-body { 
+body {
     background-image: url('background.jpg');
     /*background-repeat: no-repeat;*/
     background-attachment: fixed;
@@ -31,7 +31,7 @@ a {
 .nav-bar__menu {
 	margin: 0px;
 	padding: 0px;
-	display: flex; 
+	display: flex;
 
 }
 #show{
@@ -50,7 +50,7 @@ a {
 }
 .nav-bar__menu-item-link {
 	color: white;
-	
+
 }
 .nav-bar__menu-item-input {
 	color: white;
@@ -60,7 +60,7 @@ a {
 	background-color: gray;
 	border-radius: 10px;
 
-	
+
 }
 .nav-bar__menu-item-input::placeholder {
   color: lightgray;
@@ -121,7 +121,7 @@ a {
 .search-description1{
 	height: 160px;
 	width: 69%;
-	
+
 	float: right;
 	border-bottom: 1px solid lightgray ;
 	/*margin: 10px;*/
@@ -195,25 +195,25 @@ a {
 #featured-product{
 	width: 80%;
 	margin: auto;
-	
+
 }
 #featured-product-img{
 	width: 140px;
 	margin: auto;
-	border-radius: 15px; 
+	border-radius: 15px;
 }
 #featured-product-price{
 	width: 140px;
 	margin: auto;
-	font-size: 30px; 
+	font-size: 30px;
 	padding: 30px 0px;
-	
+
 }
 #featured-product-cart{
 	width: 80px;
 	margin: auto;
 	padding-top: 20px;
-	
+
 }
 .add-to-cart{
 	height: 30px;
@@ -240,6 +240,7 @@ a {
 .actions{
 	width: 80%;
 	margin: auto;
+  padding-bottom: 5em;
 }
 .actions input{
 	height: 30px;
@@ -250,14 +251,12 @@ a {
 	border-radius: 5px;
 
 }
-.field{
-	padding-left: 30px;
-}
-.field label{ 
+
+.field label{
 	font-size: 15px;
 	padding-bottom: 5px;
 }
-.field input{ 
+.field input{
 	font-size: 14px;
 	height: 30px;
 	border: none;

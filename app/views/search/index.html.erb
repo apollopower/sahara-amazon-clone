@@ -5,14 +5,16 @@
 <% else %>
 	<% (0..20).each do |idx| %>
 		<section id="sections">
-			
+
 			<div class ="search-picture1">
 				<%= image_tag @search.image[idx].to_s %>
 			</div>
-			<div class ="search-description1">	
+			<div class ="search-description1">
 				<ul>
 					<li class="a-title"><%= @search.title[idx] %></li>
 					<li class="a-price">$<%= @search.price[idx] %></li>
+					<li class="a-button"><button type="button" name="button">Buy with One-Click</button></li>
+					<li class="thank-you">Thank you for your purchase!</li>
 				</ul>
 			</div>
 		</section>

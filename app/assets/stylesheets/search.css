@@ -102,6 +102,31 @@ a {
 }
 
 .a-price {
-  padding-top: 1.5em;
+  padding-top: 3em;
   font-weight: bold;
+}
+
+.a-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+  border-radius: 5%;
+}
+
+button {
+  background-color: lightgrey;
+  border-radius: 5%;
+}
+
+.a-button:hover {
+
+}
+
+button:hover {
+  background-color: lightgreen;
+  font-weight: bold;
+}
+
+.field {
+  padding-bottom: 5em;
 }
